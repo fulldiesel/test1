@@ -1,11 +1,11 @@
 <script setup>
   import { RouterView } from "vue-router";
+  import Header from "@/components/Header.vue";
 </script>
 
 <template>
-  <div>
-    <RouterView/>
-  </div>
+  <Header/>
+  <RouterView/>
 </template>
 
 <style>
@@ -13,8 +13,14 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  text-decoration: none;
+  width: 50%;
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+  color: #2c3e50;
 }
 </style>

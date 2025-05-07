@@ -1,7 +1,9 @@
 <template>
     <div class="post">
-      <h2><a :href="'post/' + post.postId">{{post.postTitle}}</a></h2>
+      <!-- <h2><router-link :to="{name: 'post', params: {id: post.postID}}">{{post.postTitle}}</h2> -->
+      <h2>{{ post.postTitle }}</h2>
       <p>{{ post.postText }}</p>
+      <span class="comment-info">Comments: {{ post.comments.length }}</span>
     </div>
 </template>
   
@@ -14,10 +16,17 @@
         required: true,
       },
     },
-    methods: {
-      formatDate(date) {
-        return new Date(date).toLocaleDateString("ru-RU");
-      },
-    },
   };
   </script>
+
+<style>
+.post {
+  background-color: whitesmoke;
+  padding: 10px 30px;
+  margin: 10px;
+}
+.comment-info{
+  background-color: rgb(190, 190, 190);
+  padding: 3px 6px;
+}
+</style>

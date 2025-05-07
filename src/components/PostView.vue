@@ -2,6 +2,10 @@
     <div class="post">
       <h2>{{ post.postTitle }}</h2>
       <p>{{ post.postText }}</p>
+    </div>
+
+    <div class="post">
+      <h3>Comments: {{ post.comments.length }}</h3>
       <Comment v-for="comment in post.comments"
         :key="comment.id" 
         :comment="comment"/>
